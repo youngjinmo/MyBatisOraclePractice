@@ -1,15 +1,4 @@
----
-title: SpringBoot + MyBatis + Oracle 초간단실습
-tags:
-  - springboot
-  - mybatis
-  - docker
-  - oracle
-categories:
-  - Dev
-  - Springboot
-date: 2020-10-25 12:29:51
----
+
 ![](https://user-images.githubusercontent.com/33862991/97108403-a8922e00-1710-11eb-9e42-b093ed1857d8.png)
 
 JPA를 공부하기 전에 먼저 MyBatis로 서버를 셋팅하는걸 해보고 싶었다. 지난해 학원에서 교육받을때는 실력있는 팀원이 해주셔서 내가 직접 해본 경험이 없었다. 
