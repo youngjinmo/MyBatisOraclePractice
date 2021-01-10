@@ -16,6 +16,24 @@ public class MemberServiceImpl implements MemberService{
 	
 	@Override
 	public List<MemberVO> selectAllMembers() {
-		return memberDao.SelectAllMembers();
+		return memberDao.selectAll();
+	}
+
+	@Override
+	public void insertMember(MemberVO member) {
+		memberDao.insert(member);
+	}
+
+	@Override
+	public void updateMember(int id, MemberVO updateMember) {
+		MemberVO member = memberDao.selectById(id);
+		member.setName(updateMember.getName());
+		member.setJob(updateMember.getJob());
+		memberDao.update(member);
+	}
+
+	@Override
+	public void deleteMember(int id) {
+		memberDao.delete(id);
 	}
 }

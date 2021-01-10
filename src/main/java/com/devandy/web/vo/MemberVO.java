@@ -1,19 +1,15 @@
 package com.devandy.web.vo;
 
-import java.io.Serializable;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Data;
 
 @Data
 public class MemberVO{
-	@JsonProperty
+	@JsonProperty(value = "id")
 	private int id;
-	@JsonProperty
+	@JsonProperty(value = "name")
 	private String name;
-	@JsonProperty
+	@JsonProperty(value = "job")
 	private String job;
-	@JsonProperty
-	private String home;
 }

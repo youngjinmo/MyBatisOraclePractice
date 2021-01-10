@@ -6,6 +6,12 @@ import com.devandy.web.vo.MemberVO;
 
 public interface MemberService {
 
-	public List<MemberVO> selectAllMembers();
+	List<MemberVO> selectAllMembers();
+
+	void insertMember(MemberVO member);
+
+	void updateMember(int id, MemberVO member);
+
+	void deleteMember(int id);
 	
 }

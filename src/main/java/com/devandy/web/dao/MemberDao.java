@@ -1,12 +1,15 @@
 package com.devandy.web.dao;
 
-import java.util.List;
-
+import com.devandy.web.vo.MemberVO;
 import org.apache.ibatis.annotations.Mapper;
 
-import com.devandy.web.vo.MemberVO;
+import java.util.List;
 
 @Mapper
 public interface MemberDao {
-	public List<MemberVO> SelectAllMembers();
+	List<MemberVO> selectAll();
+	MemberVO selectById(int id);
+	void insert(MemberVO member);
+	void update(MemberVO member);
+	void delete(int id);
 }
