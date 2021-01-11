@@ -15,7 +15,7 @@
 	</select>
 	<insert id="insert" parameterType="MemberVO">
 		INSERT INTO MEMBERS(id, name, job)
-		VALUES(#{id}, #{name}, #{job})
+		VALUES(id_seq.nextval, #{name}, #{job})
 	</insert>
 	<update id="update" parameterType="MemberVO">
 		UPDATE MEMBERS
