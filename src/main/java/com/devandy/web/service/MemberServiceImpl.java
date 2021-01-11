@@ -26,14 +26,22 @@ public class MemberServiceImpl implements MemberService{
 
 	@Override
 	public void updateMember(int id, MemberVO updateMember) {
-		MemberVO member = memberDao.selectById(id);
-		member.setName(updateMember.getName());
-		member.setJob(updateMember.getJob());
-		memberDao.update(member);
+		if(memberDao.selectById(id)!=null){
+			MemberVO member = memberDao.selectById(id);
+			member.setName(updateMember.getName());
+			member.setJob(updateMember.getJob());
+			memberDao.update(member);
+		} else {
+			throw new IllegalStateException("회원이 존재하지 않습니다.");
+		}
 	}
-
 	@Override
 	public void deleteMember(int id) {
-		memberDao.delete(id);
+		if(memberDao.selectById(id)!=null){
+			memberDao.delete(id);
+		} else {
+			throw new IllegalStateException("회원이 존재하지 않습니다.");
+		}
 	}
+
 }
