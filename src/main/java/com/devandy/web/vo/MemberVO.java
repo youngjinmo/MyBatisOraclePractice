@@ -1,10 +1,10 @@
 package com.devandy.web.vo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.Setter;
 
-import lombok.Data;
-
-@Data
+@Getter @Setter
 public class MemberVO{
 	@JsonProperty(value = "id")
 	private int id;
