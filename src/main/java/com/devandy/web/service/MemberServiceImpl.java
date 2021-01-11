@@ -26,8 +26,8 @@ public class MemberServiceImpl implements MemberService{
 
 	@Override
 	public void updateMember(int id, MemberVO updateMember) {
-		if(memberDao.selectById(id)!=null){
-			MemberVO member = memberDao.selectById(id);
+		MemberVO member = memberDao.selectById(id);
+		if(member!=null){
 			member.setName(updateMember.getName());
 			member.setJob(updateMember.getJob());
 			memberDao.update(member);
@@ -35,6 +35,7 @@ public class MemberServiceImpl implements MemberService{
 			throw new IllegalStateException("회원이 존재하지 않습니다.");
 		}
 	}
+
 	@Override
 	public void deleteMember(int id) {
 		if(memberDao.selectById(id)!=null){
